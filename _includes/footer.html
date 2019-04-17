@@ -1,0 +1,89 @@
+<section id="footer">
+    <div class="inner">
+        <h2 class="major">Get in touch</h2>
+        <p>I'm glad to keep in touch to you, write me down an email to introduce your project. I'll answer you shortly!</p>
+        
+        <form id="a64a928c-6554-4d15-9f82-3e791166b2a4" method="post" action="#" hs-form="contact">
+            <div class="fields">
+                <div class="field">
+                    <label for="firstname">Name</label>
+                    <input type="text" class="form-control hs" name="firstname" id="firstname" placeholder="Your name" required/>
+                </div>
+                <div class="field">
+                    <label for="lastname">Last name</label>
+                    <input type="text" class="form-control hs" name="lastname" id="lastname" placeholder="Your last name, not required but desired" />
+                </div>
+                <div class="field">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control hs" name="company" id="company" placeholder="Your company, not required but desired" />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control hs" name="email" id="email" placeholder="You're best email" required/>
+                    <small id="emailHelp" class="form-text text-muted">Privacy is gold. I'll never share your email with anyone else.</small>
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4" class="form-control is-invalid hs" placeholder="Fill this textarea by your great thing" required></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input id="send" type="button" value="Send Message" /></li>
+            </ul>
+        </form>
+        <ul class="contact">
+            {% if site.address %}
+            <li class="fa-home"><a href="{{ site.address }}">{{ site.address }}</a></li>
+            {% endif %}
+
+            <!--    tel:
+                    ref: https://tools.ietf.org/html/rfc3966 -->
+            {% if site.phone %}
+            <li class="fa-phone"><a href="{{ site.phone | prepend: "tel:" }}">{{ site.phone }}</a></li>
+            {% endif %}
+
+            {% if site.email %}
+            <li class="fa-envelope"><a href="{{ site.email | prepend: "mailto:"}}">{{ site.email }}</a></li>
+            {% endif %}
+
+            {% if site.twitter %}
+            <li class="fa-twitter"><a href="{{ site.twitter | replace: "https://", "" | prepend: "https://" }}">{{ site.twitter }}</a></li>
+            {% endif %}
+
+            {% if site.facebook %}
+            <li class="fa-facebook"><a href="{{ site.facebook | replace: "https://", "" | prepend: "https://" }}">{{ site.facebook }}</a></li>
+            {% endif %}
+
+            {% if site.instagram %}
+            <li class="fa-instagram"><a href="{{ site.instagram | replace: "https://", "" | prepend: "https://" }}">{{ site.instagram }}</a></li>
+            {% endif %}
+
+            {% if site.linkedin %}
+            <li class="fa-linkedin"><a href="{{ site.linkedin | replace: "https://", "" | prepend: "https://" }}">{{ site.linkedin }}</a></li>
+            {% endif %}
+
+            {% if site.youtube %}
+            <li class="fa-youtube"><a href="{{ site.youtube | replace: "https://", "" | prepend: "https://" }}">{{ site.youtube }}</a></li>
+            {% endif %}
+
+            {% if site.googleplus %}
+            <li class="fa-google-plus"><a href="{{ site.googleplus | replace: "https://", "" | prepend: "https://" }}">{{ site.googleplus }}</a></li>
+            {% endif %}
+
+            {% if site.github %}
+            <li class="fa-github"><a href="{{ site.github | replace: "https://", "" | prepend: "https://" }}">{{ site.github }}</a></li>
+            {% endif %}
+
+            {% if site.dribble %}
+            <li class="fa-dribbble"><a href="{{ site.dribbble | replace: "https://", "" | prepend: "https://"}} ">{{ site.dribbble }}</a></li>
+            {% endif %}
+        </ul>
+        <ul class="copyright">
+            <li>&copy; {{ site.owner }}. All rights reserved.</li>
+            <li><a href="{{ site.url}}/cookie" title="Cookie">Cookie</a></li>
+            <li><a href="{{ site.url}}/privacy" title="Privacy">Privacy</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Packaged by: <a href="https://www.mrwooo.com/jekyllrb/themes/solid-state">MrWooo</a></li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,181 @@
+---
+---
+$body: rgba(53, 56, 73, 0.95);
+
+$sumorize: rgb(50, 153, 187);
+$sumorize-alpha: rgba(50, 153, 187, .5);
+$google-developers: rgb(117, 117, 117);
+$jekyll: rgb(251, 188, 4);
+$wp-plugins:rgb(66, 133, 244);
+$woocommerce: rgb(150, 88, 138);
+$wp-themes:rgb(52, 168, 83);
+$ubuntu: rgb(233, 84, 32);
+
+$first-row:#e5e5e5;
+$second-row:#cecece;
+$third-row:#b8b8b8;
+
+$shadow: #999;
+
+body {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(46, 49, 65, 0.8)), url("../images/bg.png");
+    section#wrapper {
+        .wrapper.spotlight {
+            div.content {
+                box-shadow: 0px 0px 25px 1px $shadow;
+            }
+        }
+        .wrapper.spotlight.sumorize {
+            background-color: $first-row;
+            .content {
+                background-color: $sumorize;
+            }
+        }
+        .wrapper.spotlight.google-developers {
+            background-color: $second-row;
+            .content {
+                background-color: $google-developers;
+            }
+        }
+        .wrapper.spotlight.jekyll {
+            background-color: $third-row;
+            .content {
+                background-color: $jekyll;
+            }
+        }
+        .wrapper.spotlight.wp-plugins {
+            background-color: $second-row;
+            .content {
+                background-color: $wp-plugins;
+            }
+        }
+        .wrapper.spotlight.woocommerce {
+            background-color: $first-row;
+            .content {
+                background-color: $woocommerce;
+            }
+        }
+        .wrapper.spotlight.wp-themes {
+            background-color: $second-row;
+            .content {
+                background-color: $wp-themes;
+            }
+        }
+        .wrapper.spotlight.ubuntu {
+            background-color: $third-row;
+            .content {
+                background-color: $ubuntu;
+            }
+        }
+        .wrapper.sumorize:not(:last-child):before, .wrapper.sumorize:not(:last-child):after,
+        .wrapper.woocommerce:not(:last-child):before, .wrapper.woocommerce:not(:last-child):after  {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23e5e5e5%3B' /%3E%3C/svg%3E"); }
+        .wrapper.sumorize:not(:last-child):before,
+        .wrapper.woocommerce:not(:last-child):before {
+            box-shadow: inset 0 -1px 0 0 $first-row, 0 1px 0 0 $first-row;
+        }
+        .wrapper.sumorize:not(:last-child):after,
+        .wrapper.woocommerce:not(:last-child):after {
+            box-shadow: inset 0 -1px 0 0 $first-row, 0 1px 0 0 $first-row;
+        }
+        .wrapper.google-developers:not(:last-child):before, .wrapper.google-developers:not(:last-child):after,
+        .wrapper.wp-plugins:not(:last-child):before, .wrapper.wp-plugins:not(:last-child):after,
+        .wrapper.wp-themes:not(:last-child):before, .wrapper.wp-themes:not(:last-child):after  {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23cecece%3B' /%3E%3C/svg%3E"); }
+        .wrapper.google-developers:not(:last-child):before,
+        .wrapper.wp-plugins:not(:last-child):before,
+        .wrapper.wp-themes:not(:last-child):before {
+            box-shadow: inset 0 -1px 0 0 $second-row, 0 1px 0 0 $second-row;
+        }
+        .wrapper.google-developers:not(:last-child):after,
+        .wrapper.wp-plugins:not(:last-child):after,
+        .wrapper.wp-themes:not(:last-child):after {
+            box-shadow: inset 0 -1px 0 0 $second-row, 0 1px 0 0 $second-row;
+        }
+        .wrapper.jekyll:not(:last-child):before, .wrapper.jekyll:not(:last-child):after,
+        .wrapper.ubuntu:not(:last-child):before, .wrapper.ubuntu:not(:last-child):after  {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23b8b8b8%3B' /%3E%3C/svg%3E"); }
+        .wrapper.jekyll:not(:last-child):before,
+        .wrapper.ubuntu:not(:last-child):before {
+            box-shadow: inset 0 -1px 0 0 $third-row, 0 1px 0 0 $third-row;
+        }
+        .wrapper.jekyll:not(:last-child):after,
+        .wrapper.ubuntu:not(:last-child):after {
+            box-shadow: inset 0 -1px 0 0 $third-row, 0 1px 0 0 $third-row;
+        }
+    }
+    section#wrapper.sumorize {
+        background-color: $sumorize;
+    }
+    section#wrapper.google-developers {
+        background-color: $google-developers;
+    }
+    section#wrapper.jekyll {
+        background-color: $jekyll;
+    }
+    section#wrapper.wp-themes {
+        background-color: $wp-themes;
+    }
+    section#wrapper.woocommerce {
+        background-color: $woocommerce;
+    }
+    section#wrapper.wp-plugins {
+        background-color: $wp-plugins;
+    }
+    section.ubuntu {
+        background-color: $ubuntu;
+    }
+    section.wrapper {
+        div.content {
+            padding:15px;
+            border-radius:5px;
+            -webkit-transition: width 1s;
+            transition: width 1s;
+        }
+        div.content:hover {
+            width: 110%;
+            height:110%;
+        }
+
+        a.image {
+            margin: 15px!important;
+            width: 30%!important;
+            border-radius: 5px!important;
+            box-shadow: 0px 0px 25px 1px $shadow;
+
+            img {
+                background: rgb(241, 243, 244);
+                border-radius: 0px!important;
+            }
+        }
+    }
+    section#footer {
+        .actions {
+            i.fa.fa-check-circle {
+                margin:15px;
+                color: #28a745;
+            }
+        }
+    }
+    nav#menu {
+        .inner {
+            background-color: $body;
+            ul.links {
+                a:hover {
+                    background-color: $body;
+                }
+            }
+        }
+    }
+}
+/* responsive */
+@media screen and (max-width: 736px){
+    body {
+        section.wrapper {
+            div.content:hover {
+                width: 100%;
+                height:100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+theme: jekyll-theme-mrwooo-solid-state
+title: MrWooo
+short_description: High five! You're welcome
+description: >- # this means to ignore newlines until "baseurl:"
+  <strong>I'm Mr. Wooo,</strong> thanks for visiting my website.<br>
+  <strong>Code lover and excited</strong> to find smart solutions for your next project.<br>
+  Passionated in lightweight, fast and modern websites <strong>tailored on your needs.</strong><br>
+  <strong>Talk me about it :)</strong>
+baseurl: "/"
+
+# google services
+ganalytics: UA-122812748-1
+gtagmanager:
+gmapsapikey:
+
+# facebook
+fpixel:
+
+# collections
+collections:
+  main:
+    output: true
+    permalink: /main/:name
+
+  defaults:
+  - scope:
+      path: 'assets/images'
+      type: 'main'
+  values:
+    image: true
+
+# contacts
+address:
+phone: (+39) 339 3051 559
+email: hello@mrwooo.com
+  
+# social
+twitter:
+facebook:
+instagram:
+linkedin: www.linkedin.com/in/domenicoleone/
+youtube:
+googleplus:
+github: github.com/dleone81
+dribbble:
+
+# copyright
+owner: MrWooo.com
+
+sass:
+  sass_dir: /assets/sass
+
+# admin
+jekyll_admin:
+  hidden_links:
+    - staticfiles
+    - datafiles
+    - configuration

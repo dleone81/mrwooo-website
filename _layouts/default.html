@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    {% include head.html %}
+    <body class="is-preload">
+			{% if site.gtagmanager %}
+
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','{{ gtagmanager }}');
+		
+			{% endif%}
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				{% include header.html %}
+
+				<!-- Menu -->
+				{% include menu.html %}		
+				
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<h2>{{ site.short_description }}</h2>
+							<p>{{ site.description }}</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						{{ content }}
+
+						{% assign my_posts = site.main  | where:"style","sumorize" %}
+						{% for item in my_posts %}
+						<section class="wrapper spotlight style1 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						{% assign my_posts = site.main  | where:"style","google-developers" %}
+						{% for item in my_posts %}
+						<section class="wrapper alt spotlight style2 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						{% assign my_posts = site.main  | where:"style","jekyll" %}
+						{% for item in my_posts %}
+						<section class="wrapper spotlight style1 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						{% assign my_posts = site.main  | where:"style","wp-plugins" %}
+						{% for item in my_posts %}
+						<section class="wrapper alt spotlight style2 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						{% assign my_posts = site.main  | where:"style","woocommerce" %}
+						{% for item in my_posts %}
+						<section class="wrapper spotlight style1 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						{% assign my_posts = site.main  | where:"style","wp-themes" %}
+						{% for item in my_posts %}
+						<section class="wrapper alt spotlight style2 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						{% assign my_posts = site.main  | where:"style","ubuntu" %}
+						{% for item in my_posts %}
+						<section class="wrapper spotlight style1 {{ item.style }}">
+							<div class="inner">
+								<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+								<div class="content">
+									<h2 class="major">{{item.title}}</h2>
+									<p>{{item.description}}</p>
+									<a href="{{ item.url }}" class="special">Learn more</a>
+								</div>
+							</div>
+						</section>
+						{% endfor %}
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">What's new?</h2>
+									<p>Find out my latest updates, curious news, interesting tutorials, tips and some gists (own or not)</p>
+									<section class="features">
+									
+										<!-- blog feed -->
+										{% include feed.html %}
+
+									</section>
+
+									<ul class="actions">
+										<li><a href="{{ "/blog/" | prepend: site.url }}" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+                <!-- Footer -->
+                {% include footer.html %}
+                
+			</div>
+
+		<!-- Scripts -->
+		{% include bottomScripts.html %}
+
+	</body>
+</html>
