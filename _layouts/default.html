@@ -44,11 +44,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -58,11 +58,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper alt spotlight style2 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -72,11 +72,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -86,11 +86,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper alt spotlight style2 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -100,11 +100,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -114,11 +114,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper alt spotlight style2 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -128,11 +128,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | prepend: site.url }}" class="image"><img src="{{ item.image | prepend: site.url }}" alt="" /></a>
+								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | prepend: site.url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -151,7 +151,7 @@
 									</section>
 
 									<ul class="actions">
-										<li><a href="{{ "/blog/" | prepend: site.url }}" class="button">Browse All</a></li>
+										<li><a href="{{ "/blog/" | relative_url }}" class="button">Browse All</a></li>
 									</ul>
 								</div>
 							</section>
