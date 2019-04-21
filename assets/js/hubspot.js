@@ -60,10 +60,7 @@ var hs = {
                         console.log(errorThrown);
                     },
                     complete: function( jqXHR, textStatus ){
-                        // empty
-                        console.log('complete');
-                        console.log(jqXHR);
-                        console.log(textStatus);
+                        $('form#'+id+' input, form#'+id+' textarea').attr('readonly', true);
                     }
                 })
             })
