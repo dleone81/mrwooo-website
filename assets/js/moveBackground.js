@@ -4,4 +4,4 @@ $(function(){
         x-=1;
         $('body').css('background-position', x + 'px 0');
     }, 150);
-})
+});
