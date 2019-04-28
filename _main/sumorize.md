@@ -8,7 +8,7 @@ style: sumorize
 ---
 **Sumorize** is a robust _software as a service_ platform.
 
-Written using RESTFul methodology, **Sumorize** is used by **developer** and **company** to create websites, landing pages and manage contents across network of websites from only one dashboard.
+Written using RESTFul methodology, **Sumorize** is used by **developers** and **company** to create websites, landing pages, manage and distribuite contents across network websites by one dashboard only.
 
 # Simple to use
 
