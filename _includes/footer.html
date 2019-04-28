@@ -3,7 +3,7 @@
         <h2 class="major">Get in touch</h2>
         <p>I'm glad to keep in touch to you, write me down an email to introduce your project. I'll answer you shortly!</p>
         
-        <form id="a64a928c-6554-4d15-9f82-3e791166b2a4" method="post" action="#" hs-form="contact">
+        <form id="a64a928c-6554-4d15-9f82-3e791166b2a4" method="post" action="#" data-hs-form="contact">
             <div class="fields">
                 <div class="field">
                     <label for="firstname">Name</label>
@@ -39,7 +39,7 @@
             <!--    tel:
                     ref: https://tools.ietf.org/html/rfc3966 -->
             {% if site.phone %}
-            <li class="fa-phone"><a href="{{ site.phone | prepend: "tel:" }}">{{ site.phone }}</a></li>
+            <li class="fa-phone"><a href="{{ site.phone | replace: " ", "" | prepend: "tel:" }}">{{ site.phone }}</a></li>
             {% endif %}
 
             {% if site.email %}

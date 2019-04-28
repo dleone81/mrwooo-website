@@ -3,7 +3,7 @@
         <h2>{{ site.data.menu.main_menu }}</h2>
         <ul class="links">
             {% for item in site.data.menu.link %}
-            <li><a href="{{ site.url }}/{{  item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
+            <li><a href="{{ site.url }}/{{  item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
             {% endfor %}
 
             <!-- li><a href="#">Log In</a></li>

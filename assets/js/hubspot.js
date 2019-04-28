@@ -14,7 +14,7 @@ var hs = {
             $('input#send').on('click', function(){
                 var form = $(this).closest('form');
                 var id = $(form).attr('id');
-                var hsForm = $(form).attr('hs-form');
+                var hsForm = $(form).attr('data-hs-form');
             
                 // data push to hubspot
                 var _data = {"fields":[]};
