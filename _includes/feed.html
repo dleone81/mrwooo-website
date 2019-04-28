@@ -1,6 +1,6 @@
 {% for post in site.posts %}
 <article>
-    <a href="{{ post.url | relative_url}}" class="image"><img src="{{ post.image | relative.url }}" alt=""></a>
+    <a href="{{ post.url | relative_url }}" class="image"><img src="{{ post.image | default: '/assets/images/default.jpg' | relative_url }}" alt="{{ post.title}} image"></a>
     <h3 class="major">{{ post.title }}</h3>
     <p></p>
     <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
