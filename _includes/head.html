@@ -41,7 +41,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta description="{{ page.description }}" />
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | truncatewords:160 }}{% else %}{{ site.description | strip_html | truncatewords:160 }}{% endif %}" />
 
     <!-- open graph -->
     {% if page.og-title %}<meta property="og:title" content="{{ page.og-title }}" />{% endif %}
