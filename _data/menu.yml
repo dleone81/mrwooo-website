@@ -5,22 +5,22 @@ link:
   url: index.html
 
 - title: Sumorize
-  url: sumorize/
+  url: sumorize
 
 - title: Google Developer
-  url: google-developers/script/
+  url: google-developer
 
 - title: Jekyll themes
-  url: jekyllrb/themes/
+  url: jekyllrb/themes
 
 - title: WordPress Plugins
-  url: wordpress/plugins/
+  url: wordpress/plugins
 
 - title: Woocommerce Extensions
-  url: woocommerce/extensions/
+  url: woocommerce/extensions
 
 - title: Wordpress Themes
-  url: wordpress/themes/
+  url: wordpress/themes
 
 - title: Professional hosting
-  url: server/linux/
+  url: server/linux
