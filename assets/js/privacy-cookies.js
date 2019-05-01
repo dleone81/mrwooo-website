@@ -5,7 +5,7 @@ var ck = {
         cname: '_mrw_pck',
         cdomain: document.domain,
         cvalue: 1,
-        cversion: '20190420',
+        cversion: '20190501',
         cpath: '/',
         exdays: 30,
         cookie: ''
