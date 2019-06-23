@@ -45,7 +45,7 @@ dribbble:
 
 # copyright
 owner: MrWooo.com
-version: 1.0.rc004
+version: 1.0.rc005
 
 sass:
   sass_dir: /assets/sass
