@@ -1,10 +1,14 @@
-{% for post in site.posts %}
-<article>
-    <a href="{{ post.url | relative_url }}" class="image"><img src="{{ post.image | default: '/assets/images/default.jpg' | relative_url }}" alt="{{ post.title}} image"></a>
-    <h3 class="major">{{ post.title }}</h3>
-    <p></p>
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-    <p></p>
-    <a href="{{ post.url | relative_url }}" class="special">Learn more</a>
-</article>
-{% endfor %}
+<h2 class="major">What's new?</h2>
+<p>Find out my latest updates, curious news, interesting tutorials, tips and some gists (owns or not)</p>
+<section class="features">
+    {% for post in site.posts %}
+    <article>
+        <a href="{{ post.url | relative_url }}" class="image" title="{{ post.title }}"><img src="{{ post.image | default: '/assets/images/default.jpg' | relative_url }}" alt="{{ post.title}} image"></a>
+        <h3 class="major"><a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <p></p>
+        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+        <p></p>
+        <a href="{{ post.url | relative_url }}" class="special" title="{{ post.title }}">Learn more</a>
+    </article>
+    {% endfor %}
+</section>

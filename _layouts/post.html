@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 <!DOCTYPE HTML>
 <!--
@@ -7,7 +7,7 @@ layout: page
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="en">
+<html>
 	{% include head.html %}
 	<body class="is-preload">
 			{% if site.gtagmanager %}
@@ -29,15 +29,12 @@ layout: page
 				<!-- Menu -->
 				{% include menu.html %}
 
-				<!-- Privacy Cookie disclaimer -->
-				{% include privacy-cookies.html %}
-
 				<!-- Wrapper -->
-					<section id="wrapper" class="{{ page.style }}">
+					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>{{ page.title }}</h2>
-								<p>{{ page.excerpt }}</p>
+                                <h2>{{ page.title }}</h2>
+                                <blockquote>{{ page.excerpt }}</blockquote>
 							</div>
 						</header>
 
@@ -45,8 +42,10 @@ layout: page
 							<div class="wrapper">
 								<div class="inner">
 									
-									{{ content }}
-									
+									{{ page.content | remove: page.excerpt }}
+
+									<p>{% if page.author %}Posted by {{ page.author }}{% endif %}{% if page.date %} at {{ page.date }}{% endif %}</p>
+
 									<!-- blog feed -->
 									{% include feed.html %}
 
@@ -62,9 +61,6 @@ layout: page
 
 		<!-- Scripts -->
 		{% include bottomScripts.html %}
-
-		<!-- Custom Scripts -->
-		{% include customScripts.html %}
 
 	</body>
 </html>
