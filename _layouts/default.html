@@ -47,11 +47,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="Sumorize" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt="Sumorize" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -61,11 +61,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper alt spotlight style2 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="Google developer" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt="Google developer" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -75,11 +75,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt=" Jekyllrb" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt=" Jekyllrb" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -89,11 +89,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper alt spotlight style2 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="Wordpress plugins" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt="Wordpress plugins" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -103,11 +103,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="Woocommerce" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt="Woocommerce" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -117,11 +117,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper alt spotlight style2 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="Wordpress themes" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt="Wordpress themes" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -131,11 +131,11 @@
 						{% for item in my_posts %}
 						<section class="wrapper spotlight style1 {{ item.style }}">
 							<div class="inner">
-								<a href="{{ item.url | relative_url }}" class="image"><img src="{{ item.image | relative_url }}" alt="Ubuntu" /></a>
+								<a href="{{ item.url | relative_url }}" class="image" title="{{ item.title }}"><img src="{{ item.image | relative_url }}" alt="Ubuntu" /></a>
 								<div class="content">
 									<h2 class="major">{{item.title}}</h2>
 									<p>{{item.description}}</p>
-									<a href="{{ item.url | relative_url }}" class="special">Learn more</a>
+									<a href="{{ item.url | relative_url }}" class="special" title="{{ item.title }}">Learn more</a>
 								</div>
 							</div>
 						</section>
@@ -149,7 +149,7 @@
 										{% include feed.html %}
 
 									<ul class="actions">
-										<li><a href="{{ "/blog/" | relative_url }}" class="button">Browse All</a></li>
+										<li><a href="{{ "/blog/" | relative_url }}" class="button" title="Browse all">Browse All</a></li>
 									</ul>
 								</div>
 							</section>
