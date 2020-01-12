@@ -11,13 +11,17 @@ var ck = {
         cookie: ''
     },
     checkCookies: function() {
-        var c = Cookies();
-        if((opt.cname in c) == false || (opt.cname in c) == 'undefined')
-            opt.target.fadeIn(2000);
+        var _c = Cookies.get(ck.options.cname);
+        if(_c != undefined)
+            var _v = JSON.parse(atob(_c));
+
+        if(_c == false || _c == undefined || _v.version < ck.options.cversion)
+            ck.options.target.fadeIn(2000);
     },
     setCookies: function(cname, cvalue, cversion, domain, cpath, exdays) {
         $('a#accept').bind('click', function(){
-            var value = btoa({value: cvalue, version: cversion});
+            var _v = {value: cvalue, version: cversion};
+            var value = btoa(JSON.stringify(_v));
             Cookies.set(cname,
                 value,
                 {
@@ -25,13 +29,13 @@ var ck = {
                     expires: exdays,
                     path: cpath
                 });
-            opt.target.fadeOut('fast');
+            ck.options.target.fadeOut('fast');
         })
     },
     init: function(){
         opt = ck.options;
         ck.checkCookies();
-        ck.setCookies(opt.cname, opt.cvalue, opt.cversion, opt.cdomain, opt.cpath, opt.exdays);  
+        ck.setCookies(ck.options.cname, ck.options.cvalue, ck.options.cversion, ck.options.cdomain, ck.options.cpath, ck.options.exdays);  
     }
 }
 $(document).ready(function(){
