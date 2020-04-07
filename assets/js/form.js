@@ -5,29 +5,11 @@ var smtp = {
     "out": 5000,
 
     notify: function(m){
-        var success = $('<i>');
-        success.addClass('fa fa-check-circle').css({'margin': '15px','color': 'green', 'text-shadow': '0px 0px 8px white'});
-        success.hide();
-
-        var error = $('<i>');
-        error.addClass('fa fa-times-circle').css({'margin': '15px','color': 'red', 'text-shadow': '0px 0px 8px white'});
-        error.hide();
-
-        var target = $('#send');
-
         if(m === 'OK'){
-            target.after(success.fadeIn(smtp.in, 'swing', function(){
-                success.fadeOut(smtp.out, 'swing', function(){
-                    success.remove();
-                }
-            )}))
+            notify.message('Your email has been submitted successful','success');
         } else {
-            target.after(error.fadeIn(smtp.in, 'swing', function(){
-                error.fadeOut(smtp.out, 'swing', function(){
-                    error.remove();
-                }
-            )
-        }))};
+            notify.message('Unable to sumbit your request. Please try later','warning');
+        }
     },
     send: function(firstname, email, msg){
 
@@ -42,7 +24,7 @@ var smtp = {
             Body: msg,
         }).then(
             message => smtp.notify(message)
-        );
+        ).then(notify.destroy);
     },
     init: function(){
         smtp.send();

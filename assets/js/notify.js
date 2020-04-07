@@ -26,6 +26,9 @@ var notify = {
           p.text(message);
           opt.target.fadeIn(2000);
     },
+    destroy: function() {
+        opt.target.delay(3000).fadeOut('2000');
+    },
     init: function(){
         opt = notify.options;
     }
